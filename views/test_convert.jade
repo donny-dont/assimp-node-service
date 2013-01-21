@@ -1,0 +1,117 @@
+extends layout
+
+block content
+  h2 Convert model
+
+  table
+    form(method='post', action='/api/convert', enctype='multipart/form-data')
+      tr
+        td Files
+        td
+          input(name='files', type='file', multiple='multiple')
+      tr
+        td Output format
+        td
+          select(name='output')
+            option(value='.mesh') Spectre JSON Format
+            option(value='.obj') Wavefront OBJ Format
+      tr
+        td Pretransform vertices
+        td
+          input(name='pretransformNormals', type='checkbox')
+      tr
+        td Generate smooth normals
+        td
+          input(name='genSmoothNormals', type='checkbox')
+      tr
+        td Generate normals
+        td
+          input(name='getNormals', type='checkbox')
+      tr
+        td Calculate tangent space
+        td
+          input(name='calcTangentSpace', type='checkbox')
+      tr
+        td Join identical vertices
+        td
+          input(name='joinIdenticalVertices', type='checkbox')
+      tr
+        td Remove redundant materials
+        td
+          input(name='removeRedundantMaterials', type='checkbox')
+      tr
+        td Find degenerates
+        td
+          input(name='findDegenerates', type='checkbox')
+      tr
+        td Split large meshes
+        td
+          input(name='splitLargeMeshes', type='checkbox')
+      tr
+        td Limit bone weights
+        td
+          input(name='limitBoneWeights', type='checkbox')
+      tr
+        td Validate data structure
+        td
+          input(name='validateDataStructure', type='checkbox')
+      tr
+        td Improve cache locality
+        td
+          input(name='improveCacheLocality', type='checkbox')
+      tr
+        td Sort by ptype
+        td
+          input(name='sortByPtype', type='checkbox')
+      tr
+        td Convert to left hand coordinates
+        td
+          input(name='convertToLeftHand', type='checkbox')
+      tr
+        td Flip uv
+        td
+          input(name='flipUVCoords', type='checkbox')
+      tr
+        td Flip winding order
+        td
+          input(name='flipWindingOrder', type='checkbox')
+      tr
+        td Transform uv coords
+        td
+          input(name='transformUVCoords', type='checkbox')
+      tr
+        td Generate uv coords
+        td
+          input(name='generateUVCoords', type='checkbox')
+      tr
+        td Find invalid data
+        td
+          input(name='findInvalidData', type='checkbox')
+      tr
+        td Fix normals
+        td
+          input(name='fixNormals', type='checkbox')
+      tr
+        td Triangulate
+        td
+          input(name='triangulate', type='checkbox')
+      tr
+        td Find instances
+        td
+          input(name='findInstances', type='checkbox')
+      tr
+        td Optimize graph
+        td
+          input(name='optimizeGraph', type='checkbox')
+      tr
+        td Optimize meshes
+        td
+          input(name='optimizeMeshes', type='checkbox')
+      tr
+        td Debone
+        td
+          input(name='debone', type='checkbox')
+      tr
+        td Split by bone count
+        td
+          input(name='splitByBoneCount', type='checkbox')
