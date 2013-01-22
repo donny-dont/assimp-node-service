@@ -201,7 +201,7 @@ function getAssimpOptions(form) {
  * @returns {string} The file extension minus the '.'.
  */
 function getExtension(filePath) {
-  return filePath.slice(filePath.lastIndexOf('.') + 1);
+  return filePath.slice(filePath.lastIndexOf('.') + 1).toLowerCase();
 }
 
 /**
@@ -224,9 +224,7 @@ function getFileName(filePath) {
  * @returns {boolean} true if the path references an importable model file; false otherwise.
  */
 function isModelFile(filePath) {
-  var extension = filePath.slice(filePath.lastIndexOf('.') + 1).toLowerCase();
-  
-  return extension in inputFormatExtensions;
+  return getExtension(filePath) in inputFormatExtensions;
 }
 
 /**
