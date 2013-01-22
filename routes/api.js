@@ -63,6 +63,7 @@ var inputFormatExtensions = {
   'pk3'    : 'Quake III Map/BSP ( .pk3 )',
   'mdc'    : 'Return to Castle Wolfenstein ( .mdc )',
   'md5'    : 'Doom 3 ( .md5 )',
+  'md5mesh': 'Doom 3 ( .md5mesh )',
   'smd'    : 'Valve Model ( .smd )',
   'vta'    : 'Valve Model ( .vta )',
   'm3'     : 'Starcraft II M3 ( .m3 )',
@@ -223,7 +224,7 @@ function getFileName(filePath) {
  * @returns {boolean} true if the path references an importable model file; false otherwise.
  */
 function isModelFile(filePath) {
-  var extension = filePath.slice(filePath.lastIndexOf('.') + 1);
+  var extension = filePath.slice(filePath.lastIndexOf('.') + 1).toLowerCase();
   
   return extension in inputFormatExtensions;
 }
