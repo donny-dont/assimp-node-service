@@ -3,18 +3,21 @@ extends layout
 block content
   h2 Convert model
 
-  table
-    form(method='post', action='/api/convert', enctype='multipart/form-data')
+  form(method='post', action='/api/convert', enctype='multipart/form-data')
+    table
       tr
         td Files
         td
-          input(name='files', type='file', multiple='multiple')
+          input(name='model', type='file', multiple='multiple')
       tr
         td Output format
         td
           select(name='output')
-            option(value='.mesh') Spectre JSON Format
-            option(value='.obj') Wavefront OBJ Format
+            option(value='mesh') Spectre ( .mesh )
+            option(value='dae') Collada ( .dae )
+            option(value='obj') Wavefront Object ( .obj )
+            option(value='stl') Stereolithography ( .stl )
+            option(value='ply') Stanford Polygon Library ( .ply )
       tr
         td Pretransform vertices
         td
@@ -115,3 +118,4 @@ block content
         td Split by bone count
         td
           input(name='splitByBoneCount', type='checkbox')
+    input(type='submit', value='Convert')

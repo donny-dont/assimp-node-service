@@ -4,6 +4,7 @@
  */
 
 var express = require('express')
+  , api  = require('./routes/api')
   , test = require('./routes/test')
   , http = require('http')
   , path = require('path');
@@ -16,7 +17,10 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));
-  app.use(express.bodyParser());
+  app.use(express.bodyParser({
+    uploadDir: __dirname + '/tmp',
+    keepExtensions: true
+  }));
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
@@ -26,6 +30,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.post('/api/convert', api.convert);
 app.get('/test/convert', test.convert);
 
 http.createServer(app).listen(app.get('port'), function(){
