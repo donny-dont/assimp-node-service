@@ -4,20 +4,12 @@ block content
   h2 Convert model
 
   form(method='post', action='/api/convert', enctype='multipart/form-data')
+    input(name='output', type='hidden', value='mesh')
     table
       tr
         td Files
         td
           input(name='model', type='file', multiple='multiple')
-      tr
-        td Output format
-        td
-          select(name='output')
-            option(value='mesh') Spectre ( .mesh )
-            option(value='dae') Collada ( .dae )
-            option(value='obj') Wavefront Object ( .obj )
-            option(value='stl') Stereolithography ( .stl )
-            option(value='ply') Stanford Polygon Library ( .ply )
       tr
         td Pretransform vertices
         td

@@ -407,7 +407,7 @@ exports.convert = function(req, res){
 
           assimp.on('exit', function (code) {
             if (code == 0) {
-              console.log('Conversion successful');
+              console.log('Conversion successful! Sending ' + outputPath);
               res.sendfile(outputPath);
             } else {
               writeError(res, 'An error occurred during conversion');
