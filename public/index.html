@@ -11,6 +11,7 @@
   </head>
   <body>
     <div is="x-model-viewer" id="model_viewer"></div>
+    <h2>Convert file</h2>
     <form method="post" enctype="multipart/form-data">
       <input name="output" type="hidden" value="mesh">
       <input name="genSmoothNormals" type="hidden" value="on">
@@ -19,10 +20,12 @@
         <tbody><tr>
           <td>Files</td>
           <td><input name="model" type="file" multiple="multiple"></td>
+          <td><input id="convertModel" type="button" value="Convert"></td>
         </tr>
       </tbody></table>
-      <input id="convertModel" type="button" value="Convert">
     </form>
+    <h2>Mesh file</h2>
+    <textarea id="modelFile" wrap="off"></textarea>
     
     <script src="dart.js"></script>
   

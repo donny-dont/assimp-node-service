@@ -29,3 +29,15 @@ h1, p {
   font-size: 24pt;
   margin-bottom: 20px;
 }
+
+h2 {
+  padding-bottom: 4px;
+  border-bottom: 1px solid black;
+  width: 640px;
+}
+
+textarea {
+  tab-size: 2;
+  width:640px;
+  height:320px;
+}
