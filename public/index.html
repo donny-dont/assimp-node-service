@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- This file was auto-generated from web/components.html. -->
+<html><head>
+    <meta charset="utf-8">
+    <title>Sample app</title>
+    <link rel="stylesheet" href="stylesheets/components.css">
+
+    <!-- import the click-counter -->
+    
+    
+  </head>
+  <body>
+    <div is="x-model-viewer" id="model_viewer"></div>
+    <form method="post" enctype="multipart/form-data">
+      <input name="output" type="hidden" value="mesh">
+      <input name="genSmoothNormals" type="hidden" value="on">
+      <input name="convertToLeftHand" type="hidden" value="on">
+      <table>
+        <tbody><tr>
+          <td>Files</td>
+          <td><input name="model" type="file" multiple="multiple"></td>
+        </tr>
+      </tbody></table>
+      <input id="convertModel" type="button" value="Convert">
+    </form>
+    
+    <script src="dart.js"></script>
+  
+
+<script type="application/dart" src="components.html_bootstrap.dart"></script></body></html>
