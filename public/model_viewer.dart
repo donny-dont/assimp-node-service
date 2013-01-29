@@ -88,7 +88,7 @@ class ModelViewerComponent extends WebComponent {
   
   // Vertex attributes
   attribute vec3 vPosition;
-  attribute vec2 vTexCoord0;
+  attribute vec3 vNormal;
   
   // Uniform variables
   uniform float uTime;
@@ -100,12 +100,14 @@ class ModelViewerComponent extends WebComponent {
   
   // Varying variables
   // Allows communication between vertex and fragment stages
-  varying vec2 samplePoint;
+  varying vec3 position;
+  varying vec3 normal;
   
   void main() {
     vec4 vPosition4 = vec4(vPosition, 1.0);
+    position = vec3(uModelViewMatrix * vPosition4);
+    normal = normalize(mat3(uNormalMatrix) * vNormal);
     gl_Position = uModelViewProjectionMatrix * vPosition4;
-    samplePoint = vTexCoord0;
   }
   ''';
   /// Default fragment shader source.
@@ -115,11 +117,33 @@ class ModelViewerComponent extends WebComponent {
   '''
   precision mediump float;
   
-  varying vec2 samplePoint;
-  uniform sampler2D sampler;
+  // Varying variables
+  // Allows communication between vertex and fragment stages
+  varying vec3 position;
+  varying vec3 normal;
+  
+  // Constants
+  vec3 lightPosition = vec3(1.0, 1.0, 0.0);
+  vec3 lightIntensity = vec3(0.5, 0.5, 0.5);
+  vec3 kd = vec3(0.5, 0.5, 0.5);
+  vec3 ka = vec3(0.2, 0.2, 0.2);
+  vec3 ks = vec3(0.6, 0.6, 0.6);
+  float shininess = 64.0;
+  
+  vec3 ads() {
+    vec3 n = normalize(normal);
+    vec3 s = normalize(lightPosition - position);
+    vec3 v = normalize(-position);
+    vec3 r = reflect(-s, n);
+    
+    return lightIntensity *
+    (ka +
+    kd * max(dot(s, n), 0.0) +
+    ks * pow(max(dot(r, v), 0.0), shininess));
+  }
   
   void main() {
-    gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);//texture2D(sampler, samplePoint);
+    gl_FragColor = vec4(ads(), 1.0);
   }
   ''';
   
