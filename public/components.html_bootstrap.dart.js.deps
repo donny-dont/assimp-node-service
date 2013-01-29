@@ -23,12 +23,15 @@ file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/async/stream.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/async/stream_controller.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/async/stream_impl.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/async/stream_pipe.dart
-file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/async/string_transform.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/async/timer.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/arrays.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/collection.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/collections.dart
+file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/iterator.dart
+file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/map.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/maps.dart
+file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/queue.dart
+file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/set.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/sort.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection/splay_tree.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/collection_dev/collection_dev.dart
@@ -38,7 +41,7 @@ file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/bool.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/collection.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/comparable.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/core.dart
-file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/date.dart
+file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/date_time.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/double.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/duration.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/errors.dart
@@ -58,7 +61,6 @@ file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/object.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/options.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/pattern.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/print.dart
-file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/queue.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/regexp.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/set.dart
 file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/core/sink.dart
@@ -97,6 +99,7 @@ file:///C:/Users/Don/Desktop/dart/dart-sdk/lib/web_audio/dart2js/web_audio_dart2
 file:///C:/Users/Don/Documents/GitHub/test/components/packages/marker_prof/profiler.dart
 file:///C:/Users/Don/Documents/GitHub/test/components/packages/marker_prof/src/profiler/profiler.dart
 file:///C:/Users/Don/Documents/GitHub/test/components/packages/marker_prof/src/profiler/profiler_tree.dart
+file:///C:/Users/Don/Documents/GitHub/test/components/packages/meta/meta.dart
 file:///C:/Users/Don/Documents/GitHub/test/components/packages/property_map/property_map.dart
 file:///C:/Users/Don/Documents/GitHub/test/components/packages/property_map/src/property_map/property_container.dart
 file:///C:/Users/Don/Documents/GitHub/test/components/packages/property_map/src/property_map/property_list.dart
